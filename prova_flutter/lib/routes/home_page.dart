@@ -50,10 +50,10 @@ class HomePage extends StatelessWidget {
                   elevation: 3,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(32.0)),
-                  minimumSize: Size(80, 67), //////// HERE
+                  minimumSize: Size(80, 67),
                 ),
                 onPressed: () {
-                  Navigator.of(context).popAndPushNamed(RouterGenerator.firstPage);
+                  Navigator.of(context).popAndPushNamed(RouterGenerator.loginPage);
                 },child: Text('Get Started', style: TextStyle(color: Color.fromRGBO(255, 249, 255, 1), fontSize: 18)),
               )
               )

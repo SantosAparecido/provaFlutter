@@ -3,14 +3,14 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 
-class cameraPage extends StatefulWidget {
-  const cameraPage({Key? key}) : super(key: key);
+class camera extends StatefulWidget {
+  const camera({Key? key}) : super(key: key);
 
   @override
-  State<cameraPage> createState() => _CameraPageState();
+  State<camera> createState() => _CameraState();
 }
 
-class _CameraPageState extends State<cameraPage> {
+class _CameraState extends State<camera> {
   List<CameraDescription> cameras = [];
   CameraController? controller;
   XFile? imagem;
@@ -64,13 +64,13 @@ class _CameraPageState extends State<cameraPage> {
     size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Documento Oficial'),
-        backgroundColor: Colors.grey[900],
+        title: const Text('Take a picture'),
+        backgroundColor: Color.fromRGBO(83, 177, 117, 1),
         centerTitle: true,
         elevation: 0,
       ),
       body: Container(
-        color: Colors.grey[900],
+        color: Color.fromRGBO(83, 177, 117, 1),
         child: Center(
           child: _arquivoWidget(),
         ),
@@ -87,7 +87,7 @@ class _CameraPageState extends State<cameraPage> {
 
   _arquivoWidget() {
     return SizedBox(
-      width: size!.width - 50,
+      width: size!.width,
       height: size!.height - (size!.height / 3),
       child: imagem == null
           ? _cameraPreviewWidget()
