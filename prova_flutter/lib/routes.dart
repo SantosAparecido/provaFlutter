@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:prova_flutter/routes/camera_page.dart';
+import 'package:prova_flutter/routes/carrinho_page.dart';
 import 'package:prova_flutter/routes/home_page.dart';
-import 'package:prova_flutter/routes/listView.dart';
+import 'package:prova_flutter/routes/listaView.dart';
 import 'package:prova_flutter/routes/listaCompras.dart';
 import 'package:prova_flutter/routes/location.dart';
 import 'package:prova_flutter/routes/login_pages.dart';
-import 'package:prova_flutter/routes/listaCompras.dart';
 
 class RouterGenerator {
   static const String homePage = '/';
   static const String cameraPage = "/camera";
   static const String loginPage = '/loginPage';
-  static const String myApp = '/myApp';
-  static const String listVie = '/listVie';
-  static const String location = '/location';
+  static const String listaView = '/listaView';
+  static const String carrinhoPage= '/carrinhoPage';
+  static const String listaCompras= '/listaCompras';
+  
   RouterGenerator._() {}
     static Route<dynamic> generateRoute(RouteSettings settings) {
       switch (settings.name) {
@@ -29,17 +30,17 @@ class RouterGenerator {
           return MaterialPageRoute(
             builder: (_) => const LoginPage(),
           );
-        case myApp:
+        case listaView:
           return MaterialPageRoute(
-            builder: (_) => MyApp(),
+            builder: (_) => ListaView(),
           );
-        case listVie:
+        case carrinhoPage:
           return MaterialPageRoute(
-            builder: (_) => ListVie(),
+            builder: (_) => CarrinhoPage(),
           );
-        case location:
+        case listaCompras:
           return MaterialPageRoute(
-            builder: (_) => Location(),
+            builder: (_) => ListaCompras(),
           );
         default:
           throw FormatException("Rota não encontrada");

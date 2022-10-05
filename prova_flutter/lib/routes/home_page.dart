@@ -2,12 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:prova_flutter/routes.dart';
 
 
-void main() {
-  runApp(const HomePage());
-}
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  const HomePage();
   
   get decoration => null;
 

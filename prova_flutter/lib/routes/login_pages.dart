@@ -2,12 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:prova_flutter/routes.dart';
 
 
-void main() {
-  runApp(const LoginPage());
-}
-
 class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+  const LoginPage();
 
   @override
   State<LoginPage> createState() => _LoginPageState();
@@ -142,7 +138,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                   onPressed: () {
-                    Navigator.of(context).popAndPushNamed(RouterGenerator.listVie);
+                    Navigator.of(context).popAndPushNamed(RouterGenerator.listaView);
                   },
                 ),
               ),

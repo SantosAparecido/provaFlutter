@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:prova_flutter/routes.dart';
+import 'package:prova_flutter/src/carrinho.dart';
+import 'package:prova_flutter/src/produtos.dart';
+import 'package:provider/provider.dart';
 
 
-void main() {
- runApp(const MyApp());
-}
+void main() => runApp(MultiProvider(providers: [ChangeNotifierProvider(create: (context) => Produto()),ChangeNotifierProvider(create: (context) => Carrinho())], child: MyApp(),));
 
 class MyApp extends StatelessWidget {
   const MyApp();

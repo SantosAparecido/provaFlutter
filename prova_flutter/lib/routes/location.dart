@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:prova_flutter/routes.dart';
 
-void main() {
-  runApp(const Location());
-}
 
 const List<String> stateList = <String>['SP', 'MG', 'RJ', 'SC'];
 const List<String> cityList = <String>[
@@ -14,7 +11,7 @@ const List<String> cityList = <String>[
 ];
 
 class Location extends StatelessWidget {
-  const Location({super.key});
+  const Location();
 
   @override
   Widget build(BuildContext context) {

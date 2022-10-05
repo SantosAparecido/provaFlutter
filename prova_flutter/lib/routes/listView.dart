@@ -1,23 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:prova_flutter/routes.dart';
 
-void main() {
-  runApp(const ListVie());
-}
+
 
 class ListVie extends StatelessWidget {
-  const ListVie({super.key});
+  const ListVie();
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-        ),
-        home: const ListViewHome());
+    return Scaffold(
+      body: ListViewHome(),
+    );
   }
 }
 
@@ -26,8 +20,7 @@ class ListViewHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
+    return Container(
         height: double.infinity,
         width: double.infinity,
         child: ListView(
@@ -121,8 +114,8 @@ class ListViewHome extends StatelessWidget {
                   ),
                   Row(children: [
                   ElevatedButton(
-                  onPressed: (){
-                    Navigator.of(context).popAndPushNamed(RouterGenerator.myApp);
+                    onPressed: () {
+                    Navigator.of(context).popAndPushNamed(RouterGenerator.listaCompras);
                   },
                   child: Text("Lista de Compras", style: TextStyle(color: Color.fromRGBO(83, 177, 177, 1), fontSize: 14)),
                   style: ElevatedButton.styleFrom(
@@ -151,7 +144,6 @@ class ListViewHome extends StatelessWidget {
                 ),
               ],
             ),
-      ),
-    );
+      );
   }
 }
